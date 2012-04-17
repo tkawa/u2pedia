@@ -20,7 +20,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'irwi'
+#gem 'irwi', :path => '/Users/tkawa/Projects/irwi'
+gem 'irwi', :git => 'git://github.com/tkawa/irwi.git'
 gem 'bluecloth'
 
 gem 'thin'
