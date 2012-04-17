@@ -1,0 +1,29 @@
+ja:
+  activerecord:
+    models:
+      wiki_page: Wikiページ  #g
+      wiki_page_version: Wikiページのバージョン  #g
+
+    attributes:
+      wiki_page:
+        content: 内容  #g
+        creator: :activerecord.models.creator  #g
+        path: パス  #g
+        title: タイトル  #g
+        updator: :activerecord.models.updator  #g
+        versions: バージョン  #g
+
+      wiki_page_version:
+        comment: コメント  #g
+        content: 内容  #g
+        number: 数  #g
+        page: :activerecord.models.page  #g
+        path: パス  #g
+        title: タイトル  #g
+        updator: :activerecord.models.updator  #g
+  wiki:
+    "There is no such page": ページがありません。<a href="%{new_url}">新しくページを作成</a>しますか？
+    "Creating a new wiki page": 新しいWikiページを作成
+    "Create page": :helpers.submit.create
+    "Title:": :activerecord.attributes.wiki_page.title
+    "Content:": :activerecord.attributes.wiki_page.content
