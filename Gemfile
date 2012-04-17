@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'irwi'
+gem 'bluecloth'
 
 gem 'thin'
 gem 'jquery-rails'
