@@ -73,37 +73,37 @@
 
 
 /* フッター */
-#footer	{
+footer	{
 	margin:	60px 0 0 0;
 	padding:	20px 10px;
 	background-color:	#1F276F;
 	color:	#fff;
 	font-size:	0.8em;
 }
-#footer .u2Logo	{
+footer .u2Logo	{
 	display:	inline;
 }
-#footer .u2Logo a	{
+footer .u2Logo a	{
 
 }
-#footer .u2Logo a img	{
+footer .u2Logo a img	{
 	border:	none;
 	vertical-align:	-3px;
 }
-#footer .comInfo	{
+footer .comInfo	{
 	margin:	0;
 	padding:	0;
 	list-style-type:	none;
 	display:	inline;
 }
-#footer .comInfo li	{
+footer .comInfo li	{
 	display:	inline;
 	padding:	0 0 0 1em;
 }
-#footer .comInfo li a	{
+footer .comInfo li a	{
 	color:	#ccc;
 }
-#footer #copyright	{
+footer #copyright	{
 	border-top:	1px solid #4c528c;
 	text-align:	center;
 	margin:	20px 0 0 0;

@@ -7,13 +7,13 @@
     = csrf_meta_tags
   %body{:class => "#{controller_name} #{controller_name}_#{action_name}"}
     #wrapper
-      #headerU2plus
+      %header#headerU2plus
         %p.u2Logo
           = link_to image_tag('logo.gif', :alt => 'U2plus', :width => 100), 'http://u2plus.jp/'
         %p#u2Read うつ×認知行動療法×WEB×セラピスト
         %ul.u2SNS
           %li.mixi
-      #headerPedia
+      %header#headerPedia
         %h1= link_to 'うつペディア', wiki_page_path
         %p みんなで情報をあつめるという特性上、情報の正確性は保証できません
 
@@ -23,7 +23,7 @@
         #subFooter
           %p#goTop
             = link_to '上へ', '#wrapper'
-      #footer
+      %footer
         %p.u2Logo
           = link_to image_tag('logoU2plusWhite.png', :alt => 'U2plus', :size => '100x30'), 'http://u2plus.jp/'
         %ul.comInfo
