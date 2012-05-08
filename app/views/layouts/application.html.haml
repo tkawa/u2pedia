@@ -5,7 +5,7 @@
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body
+  %body{:class => "#{controller_name} #{controller_name}_#{action_name}"}
     #wrapper
       #headerU2plus
         %p.u2Logo
@@ -20,14 +20,6 @@
       #main
         = yield
 
-        #subMenu
-          %h2 主なコンテンツ
-          %ul#subList
-            %li うつペディア編集の仕方
-          %ul.banner
-            /
-              %li
-                = link_to image_tag('banner-sample.png', :alt => 'バナー'), 'http://u2plus.jp/'
         #subFooter
           %p#goTop
             = link_to '上へ', '#wrapper'

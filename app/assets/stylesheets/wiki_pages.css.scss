@@ -76,7 +76,7 @@ clear:	both;
 	padding:	0;
 }
 
-#main	{
+body.wiki_pages_show #main	{
 	margin:	0;
 	padding:	0;
 	background-image:	url(bgSubmenu.png);
@@ -119,11 +119,11 @@ background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #fffff
 }
 
 
-#wiki_content h2	{
+#wiki_content h1	{
 	margin:	20px;
 	border-bottom:	1px dotted #93c21e;
 	line-height:	1.5em;
-	font-size:	1.5em;
+	//font-size:	1.5em;
 }
 #wiki_content ul	{}
 #wiki_content ul li	{
@@ -133,7 +133,7 @@ background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #fffff
 #wiki_content ul ul li	{
 	margin-top:	1em;
 }
-#wiki_content ul h3	{
+#wiki_content h2	{
 	margin:	2em 0 0 0;
 }
 
