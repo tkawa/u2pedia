@@ -6,4 +6,38 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    #wrapper
+      #headerU2plus
+        %p.u2Logo
+          = link_to image_tag('logo.gif', :alt => 'U2plus', :width => 100), 'http://u2plus.jp/'
+        %p#u2Read うつ×認知行動療法×WEB×セラピスト
+        %ul.u2SNS
+          %li.mixi
+      #headerPedia
+        %h1= link_to 'うつペディア', wiki_page_path
+        %p みんなで情報をあつめるという特性上、情報の正確性は保証できません
+
+      #main
+        = yield
+
+        #subMenu
+          %h2 主なコンテンツ
+          %ul#subList
+            %li うつペディア編集の仕方
+          %ul.banner
+            /
+              %li
+                = link_to image_tag('banner-sample.png', :alt => 'バナー'), 'http://u2plus.jp/'
+        #subFooter
+          %p#goTop
+            = link_to '上へ', '#wrapper'
+      #footer
+        %p.u2Logo
+          = link_to image_tag('logoU2plusWhite.png', :alt => 'U2plus', :size => '100x30'), 'http://u2plus.jp/'
+        %ul.comInfo
+          %li= link_to '利用規約', 'http://u2plus.jp/tos'
+          %li= link_to 'プライバシーポリシー', 'http://u2plus.jp/privacy'
+          %li= link_to '運営会社', 'http://u2plus.co.jp/'
+          %li= link_to 'お問い合わせ', 'http://u2plus.jp/contact'
+          %li= link_to 'ブログ', 'http://blog.u2plus.jp'
+        %p#copyright Copyright &copy; U2plus All rights reserved.

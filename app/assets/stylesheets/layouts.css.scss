@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/* -------------------------
+グローバルナビゲーション
+------------------------- */
+
+
+/* ヘッダー */
+#headerU2plus	{
+  border-top:	6px solid #1F276F;
+  border-bottom:	5px solid #20B2E6;
+  padding:	5px 10px;
+  position:	relative;
+}
+
+#headerU2plus .u2Logo	{
+	margin:	0;
+	padding:	0 1em 0 0;
+	display:	inline;
+}
+#headerU2plus .u2Logo a	{
+
+}
+#headerU2plus .u2Logo a img	{
+	border:	none;
+	vertical-align:	-3px;
+}
+
+#headerU2plus #u2Read	{
+	font-size:	0.8em;
+	color:	#666;
+	margin:	0;
+	padding:	0;
+	display:	inline;
+}
+
+#headerU2plus ul.u2SNS	{
+	list-style-type:	none;
+	margin:	0;
+	padding:	0;
+	position:	absolute;
+	top:	15px;
+	right:	-10px;
+}
+
+#headerU2plus ul.u2SNS li	{
+	margin:	0 0 0 0;
+	padding:	0 0 0 10px;
+	display:	block;
+	float:	left;
+	position:	relative;
+}
+#headerU2plus ul.u2SNS li	{
+
+}
+#headerU2plus ul.u2SNS li.mixi	{
+
+}
+#headerU2plus ul.u2SNS li.fb	{
+
+}
+#headerU2plus ul.u2SNS li.twitter	{
+
+}
+
+#headerU2plus ul.u2SNS li a	{
+
+}
+#headerU2plus ul.u2SNS li a img	{
+
+}
+
+
+
+/* フッター */
+#footer	{
+	margin:	60px 0 0 0;
+	padding:	20px 10px;
+	background-color:	#1F276F;
+	color:	#fff;
+	font-size:	0.8em;
+}
+#footer .u2Logo	{
+	display:	inline;
+}
+#footer .u2Logo a	{
+
+}
+#footer .u2Logo a img	{
+	border:	none;
+	vertical-align:	-3px;
+}
+#footer .comInfo	{
+	margin:	0;
+	padding:	0;
+	list-style-type:	none;
+	display:	inline;
+}
+#footer .comInfo li	{
+	display:	inline;
+	padding:	0 0 0 1em;
+}
+#footer .comInfo li a	{
+	color:	#ccc;
+}
+#footer #copyright	{
+	border-top:	1px solid #4c528c;
+	text-align:	center;
+	margin:	20px 0 0 0;
+	padding:	10px 0 0 0;
+	line-height:	1em;
+	color:	#999;
+	font-family:	Arial, Helvetica, sans-serif;
+}

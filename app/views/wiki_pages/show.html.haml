@@ -1,0 +1,8 @@
+-#= wiki_page_style
+.wiki_page_info
+  %p
+    =(wt "Revised on %{time} by %{user}", :time => l( @page.updated_at, :format => :long ), :user => wiki_user( @page.updator ) ).html_safe
+  = wiki_page_actions
+#wiki_content
+  %h1= h @page.title
+  = wiki_content @page.content

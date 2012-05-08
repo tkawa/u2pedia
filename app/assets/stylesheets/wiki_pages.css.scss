@@ -1,3 +1,218 @@
+@charset "UTF-8";
+
+body	{
+  background-attachment:initial;
+  background-clip:initial;
+  background-color:initial;
+  background-image:url(bg.jpg);
+  background-origin:initial;
+  background-position:0 0;
+  background-repeat:	repeat-x;
+  margin:	0;
+  padding:	0;
+}
+#wrapper	{
+  background-color:#FFFFFF;
+  border-right-color:#D2D4E2;
+  border-right-style:solid;
+  border-right-width:1px;
+  border-left-color:#D2D4E2;
+  border-left-style:solid;
+  border-left-width:1px;
+  margin:0 auto;
+  padding:0;
+}
+
+
+/* 横幅管理
+------------------ */
+/*全体幅*/
+#wrapper	{
+width:720px;
+}
+/*メイン幅*/
+#wiki_content	{
+width:	570px;
+float:	right;
+padding-bottom:	20px;
+}
+/*サブ幅*/
+#subMenu	{
+width:	140px;
+float:	left;
+padding-bottom:	20px;
+}
+/*サブフッター幅*/
+#subFooter	{
+width:100%;
+clear:	both;
+}
+
+
+
+
+#headerPedia	{
+	padding:	30px 20px 20px 110px;
+	border-bottom-color:	#93c21e;
+	border-bottom-style:	solid;
+	border-bottom-width:	1px;
+	background-image:	url(tree.png);
+	background-position:	20px bottom;
+	background-repeat:	no-repeat;
+}
+#headerPedia h1	{
+	margin:	0 0 5px 0;
+	padding:	0;
+	font-size:	180%;
+}
+#headerPedia h1 a	{
+	color:	#93c21e;
+	text-decoration:	none;
+}
+#headerPedia p	{
+	font-size:	80%;
+	color:	#666;
+	margin:	0;
+	padding:	0;
+}
+
+#main	{
+	margin:	0;
+	padding:	0;
+	background-image:	url(bgSubmenu.png);
+	background-position:	0;
+	background-repeat:	repeat-y;
+}
+.wiki_page_info	{
+	text-align:	right;
+	padding:	5px 20px;
+	border-bottom:	1px solid #93c21e;
+	/*background-color:	#f0ffc9;*/
+/*ここで背景のベースカラーを指定する*/
+background-color: #f0ffc9;
+
+/*ここでCSS3のグラデーションをつかってストライプのパターン・色を指定する
+（※色を変える場合は#fffffffの部分を変更）*/
+background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #ffffff), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #ffffff),color-stop(.75, #ffffff), color-stop(.75, transparent),to(transparent));
+
+/*ここでパターンの大きさを指定する
+（※数字によってはストライプのグラデーションがずれるので注意）*/
+-webkit-background-size: 7px 7px;
+}
+.wiki_page_info p	{
+	font-size:	75%;
+	color:	#999;
+	display:	inline;
+	margin-right:	20px;
+}
+.wiki_page_actions	{
+	font-size:	80%;
+	list-style-type:	none;
+	margin:	0;
+	padding:	0;
+	text-align:	right;
+	display:	inline;
+}
+.wiki_page_actions li	{
+	display:	inline;
+	margin-left:	1em;
+}
+
+
+#wiki_content h2	{
+	margin:	20px;
+	border-bottom:	1px dotted #93c21e;
+	line-height:	1.5em;
+	font-size:	1.5em;
+}
+#wiki_content ul	{}
+#wiki_content ul li	{
+	margin-top:	1.5em;
+}
+#wiki_content ul ul	{}
+#wiki_content ul ul li	{
+	margin-top:	1em;
+}
+#wiki_content ul h3	{
+	margin:	2em 0 0 0;
+}
+
+
+
+#subMenu h2	{
+	font-size:	0.95em;
+	line-height:	1.5em;
+	text-align:	center;
+	width:	100%;
+	background-color:	#93c21e;
+	color:	#fff;
+}
+#subMenu ul	{
+	margin:	10px 0 0 15px;
+	padding:	0;
+	list-style-type:	none;
+}
+
+#subMenu ul#subList	{
+	font-size:	0.8em;
+	line-height:	1.5em;
+}
+#subMenu ul#subList li	{
+	margin:	1.5em 0 0 0;
+}
+
+#subMenu ul.banner	{
+	margin-top:	2em;
+}
+#subMenu ul.banner li	{
+	margin:	10px 0 0 0;
+}
+#subMenu ul.banner li a	{
+
+}
+#subMenu ul.banner li a img	{
+	border-width:	1px;
+}
+
+
+
+
+
+#subFooter	{
+	font-size:	80%;
+	border-top:	1px solid #93c21e;
+	border-bottom:	1px solid #93c21e;
+	padding:	5px 0;
+	margin:	0 0 2px 0;
+	/*background-color:	#f0ffc9;*/
+/*ここで背景のベースカラーを指定する*/
+background-color: #f0ffc9;
+
+/*ここでCSS3のグラデーションをつかってストライプのパターン・色を指定する
+（※色を変える場合は#fffffffの部分を変更）*/
+background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #ffffff), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #ffffff),color-stop(.75, #ffffff), color-stop(.75, transparent),to(transparent));
+
+/*ここでパターンの大きさを指定する
+（※数字によってはストライプのグラデーションがずれるので注意）*/
+-webkit-background-size: 7px 7px;
+}
+#goTop	{
+	margin:	0;
+	margin-left:	650px;
+	line-height:	1.3em;
+}
+#goTop a	{
+	width:	4em;
+	display:	block;
+	position:	relative;
+	right:	0;
+	text-indent:20px;
+	background-image:	url(iconGotop.png);
+	background-position:	left 0px;
+	background-repeat:	no-repeat;
+}
+
+
 /*
 body
 { 
