@@ -16,6 +16,7 @@
       %header#headerPedia
         %h1= link_to 'うつペディア', wiki_page_path
         %p みんなで情報をあつめるという特性上、情報の正確性は保証できません
+        #cse-search-form Loading
 
       #main
         = yield
@@ -33,3 +34,15 @@
           %li= link_to 'お問い合わせ', 'http://u2plus.jp/contact'
           %li= link_to 'ブログ', 'http://blog.u2plus.jp'
         %p#copyright Copyright &copy; U2plus All rights reserved.
+
+    = javascript_include_tag "http://www.google.com/jsapi"
+    :javascript
+      google.load('search', '1', {language : 'ja', style : google.loader.themes.GREENSKY});
+      google.setOnLoadCallback(function() {
+        var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+          '014074490963648789926:mzgmz0hupqw', customSearchOptions);
+        customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+        var options = new google.search.DrawOptions();
+        options.enableSearchboxOnly("http://www.google.com/cse?cx=014074490963648789926:mzgmz0hupqw", null, true);
+        customSearchControl.draw('cse-search-form', options);
+      }, true);
