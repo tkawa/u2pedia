@@ -86,6 +86,8 @@ body.wiki_pages_show #main	{
 }
 .wiki_page_info p{
 	float:left;
+	width:88%;
+	text-align:right;
 	color:	#999;
 	margin:0;
 }
@@ -165,17 +167,17 @@ ul.wiki_page_actions{
 	font-weight:	bold;
 }
 
-/*リスト*/
+/*リスト(スタイル)*/
 #wiki_content ul{
 	list-style-type: disc;
 }
 #wiki_content ol	{
 	list-style-type:decimal;
 }
-	
+
+/*リスト(インデント)*/
 #wiki_content ul,
 #wiki_content ol{
-	margin-bottom:30px;
 	padding-left:2em;
 }
 #wiki_content ul ul,
@@ -184,10 +186,11 @@ ul.wiki_page_actions{
 }
 
 /* 引用----------------------- */
-#wiki_content blockquote	{
-	margin:	auto 0;
-	padding:0 0 0 5em;
+#wiki_content blockquote{
 	background:url(blockquote.png) 0 0 no-repeat;
+	color:#555;
+	margin:0;
+	padding:0 0 0 6em;
 }
 
 
