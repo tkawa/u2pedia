@@ -50,46 +50,25 @@ td.gsc-clear-button {
   display: none;
 }
 
-
-/* MAIN
+/* WIKI_PAGE
 ============================================================================*/
-#main{
-	margin:0;
-	padding:0;
-}
-
-.editing_wiki_page{
-	padding:30px;
-}
-.editing_wiki_page h1{
-	color:#93c21e;
-	margin:0 0 .5em 0;
-}
-
-/*wiki_pages_show*/
-body.wiki_pages_show #main	{
-	margin:	0;
-	padding:	0;
-}
-
-/*wiki_page_info*/
-.wiki_page_info{
+#wiki_page{
 	overflow:hidden;
 	font:.85em/2em Arial, Helvetica, sans-serif;
 	border-bottom: 1px solid #93c21e;
-	padding:0 30px;
+	padding:10px 30px 0 30px;
 	
 	/* ↓ストライプ背景↓ */
 	background-color: #f0ffc9;
 	background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #ffffff), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #ffffff),color-stop(.75, #ffffff), color-stop(.75, transparent),to(transparent));
 	-webkit-background-size: 7px 7px;
 }
-.wiki_page_info p{
+
+/*wiki_page_info*/
+p.wiki_page_info{	
 	float:left;
-	width:88%;
-	text-align:right;
-	color:	#999;
-	margin:0;
+	color:#93c21e;
+	margin:0;	
 }
 
 /*wiki_page_actions*/
@@ -106,8 +85,10 @@ ul.wiki_page_actions{
 }
 .wiki_page_actions li a{
 	display:block;
+	width:50px;
 	background-color:#93c21e;
 	color:#FFF;
+	text-align:center;
 	text-decoration:none;
 	padding:0 5px;
 }
@@ -118,13 +99,26 @@ ul.wiki_page_actions{
 
 
 
+/* MAIN
+============================================================================*/
+#main{
+	margin:0;
+	padding:30px;
+}
+
+h1.wiki_page_title{
+	color:#93c21e;
+	margin:0 0 .5em 0;
+}
+
+
 /* 本文スタイル
 ----------------------------------------------------------------------------*/
 #wiki_content{
 	font-size:	1em;
 	line-height: 1.8em;
 	margin:	0;
-	padding: 10px 30px;
+	padding: 0;
 }
 
 /*段落*/
@@ -136,7 +130,7 @@ ul.wiki_page_actions{
 #wiki_content h2,
 #wiki_content h3,
 #wiki_content h4,
-#wiki_content h5{ margin-bottom:10px; }
+#wiki_content h5{ margin-bottom:10px; margin:0; }
 #wiki_content h1	{
 	font-size:	1.8em;
 	line-height:	1.5em;

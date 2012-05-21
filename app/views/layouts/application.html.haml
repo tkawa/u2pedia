@@ -16,13 +16,16 @@
           %h1= link_to 'うつペディア', wiki_page_path
           %p みんなで情報をあつめるという特性上、情報の正確性は保証できません
         #cse-search-form.right Loading
-
+    
+      - if content_for? :wiki_page
+        = yield :wiki_page
+      
       #main
         = yield
 
-        #subFooter
-          %p#goTop
-            = link_to '上へ', '#wrapper'
+      #subFooter
+        %p#goTop
+          = link_to '上へ', '#wrapper'
       
       %footer
         .logo
