@@ -1,124 +1,60 @@
 @charset "UTF-8";
 
-/* -------------------------
+/* CSS Document
+----------------------------------------------------------------------------
 グローバルナビゲーション
-------------------------- */
+----------------------------------------------------------------------------*/
 
 
-/* ヘッダー */
-#headerU2plus	{
-  border-top:	6px solid #1F276F;
-  border-bottom:	5px solid #20B2E6;
-  padding:	5px 10px;
-  position:	relative;
+/*float:base*/
+.left{ float:left; }
+.right{ float:right; }
+
+/* HEADER - U2plus
+============================================================================*/
+header#headerU2plus{
+	overflow:hidden;
+	border-top:6px solid #1F276F;
 }
-
-#headerU2plus .u2Logo	{
-	margin:	0;
-	padding:	0 1em 0 0;
-	display:	inline;
+header#headerU2plus .left{
+	padding:30px 0 0 30px;
 }
-#headerU2plus .u2Logo a	{
-
-}
-#headerU2plus .u2Logo a img	{
-	border:	none;
-	vertical-align:	-3px;
-}
-
-#headerU2plus #u2Read	{
-	font-size:	0.8em;
-	color:	#666;
-	margin:	0;
-	padding:	0;
-	display:	inline;
-}
-
-#headerU2plus ul.u2SNS	{
-	list-style-type:	none;
-	margin:	0;
-	padding:	0;
-	position:	absolute;
-	top:	15px;
-	right:	-10px;
-}
-
-#headerU2plus ul.u2SNS li	{
-	margin:	0 0 0 0;
-	padding:	0 0 0 10px;
-	display:	block;
-	float:	left;
-	position:	relative;
-}
-#headerU2plus ul.u2SNS li	{
-
-}
-#headerU2plus ul.u2SNS li.mixi	{
-
-}
-#headerU2plus ul.u2SNS li.fb	{
-
-}
-#headerU2plus ul.u2SNS li.twitter	{
-
-}
-
-#headerU2plus ul.u2SNS li a	{
-
-}
-#headerU2plus ul.u2SNS li a img	{
-
+header#headerU2plus .left h1{
+	width:202px;
+	height:60px;
 }
 
 
-
-/* フッター */
-footer	{
-	margin:	60px 0 0 0;
-	padding:	20px 10px;
-	background-color:	#1F276F;
-	color:	#fff;
-	font-size:	0.8em;
-}
-footer .u2Logo	{
-	display:	inline;
-}
-footer .u2Logo a	{
-
-}
-footer .u2Logo a img	{
-	border:	none;
-	vertical-align:	-3px;
-}
-footer .comInfo	{
-	margin:	0;
-	padding:	0;
-	list-style-type:	none;
-	display:	inline;
-}
-footer .comInfo li	{
-	display:	inline;
-	padding:	0 0 0 1em;
-}
-footer .comInfo li a	{
-	color:	#ccc;
-}
-footer #copyright	{
-	border-top:	1px solid #4c528c;
-	text-align:	center;
-	margin:	20px 0 0 0;
-	padding:	10px 0 0 0;
-	line-height:	1em;
-	color:	#999;
-	font-family:	Arial, Helvetica, sans-serif;
+/* FOOTER
+============================================================================*/
+footer{
+	clear:both;
+	background-color:#1F276F;
+	color:#FFF;
+	font:.85em/140% Arial, Helvetica, sans-serif;
+	padding:30px 30px 60px 30px;
 }
 
-#cse-search-form {
-  width: 250px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
+/*nfoot*/
+ul.nfoot{
+	overflow:hidden;
+	padding-top:1em;
 }
-td.gsc-clear-button {
-  display: none;
+.nfoot li{
+	display:inline;
+	float:left;
+	border-right:1px solid #63689A;
+	margin-right:2em;
+	padding-right:2em;
+	line-height:22px;
+}
+.nfoot a,
+.nfoot a:link,
+.nfoot a:active,
+.nfoot a:visited{	color:#FFF; border-bottom:1px solid #FFF; }
+.nfoot a:hover{	color:#FFF; border-bottom:none; }
+
+/*copyright*/
+#copyright{
+	padding-top:1em;
 }
