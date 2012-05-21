@@ -61,5 +61,12 @@ module U2pedia
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Rewrite old domain
+    config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+      r301 %r{.*}, 'http://u2pedia.u2plus.jp$&', :if => Proc.new {|rack_env|
+        rack_env['SERVER_NAME'] == 'u2pedia.herokuapp.com'
+      }
+    end
   end
 end

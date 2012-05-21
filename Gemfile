@@ -30,6 +30,7 @@ gem "haml-rails", ">= 0.3.4"
 gem "rspec-rails", ">= 2.9.0", :group => [:development, :test]
 gem 'i18n_generators', :group => :development
 gem 'erb2haml', :group => :development
+gem 'rack-rewrite'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
