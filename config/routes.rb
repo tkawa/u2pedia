@@ -1,6 +1,8 @@
 U2pedia::Application.routes.draw do
   wiki_root '/wiki'
 
+  root :to => redirect('/wiki')
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
