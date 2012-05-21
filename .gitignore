@@ -15,3 +15,5 @@
 /tmp
 
 .rvmrc
+.DS_Store
+._*
