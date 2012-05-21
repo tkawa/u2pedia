@@ -121,44 +121,37 @@ h1.wiki_page_title{
 	padding: 0;
 }
 
-/*段落*/
-#wiki_content p{ margin-bottom:1em; }
-
-
 /*見出し*/
 #wiki_content h1,
 #wiki_content h2,
 #wiki_content h3,
 #wiki_content h4,
-#wiki_content h5{ margin-bottom:10px; margin:0; }
-#wiki_content h1	{
-	font-size:	1.8em;
-	line-height:	1.5em;
-	border-bottom:	5px solid #93c21e;
+#wiki_content h5{
+	line-height:1.5em;
 	font-weight:	bold;
+	margin:0 0 10px 0;
 }
-#wiki_content h2	{
+#wiki_content h1{
+	font-size:	1.8em;
+	border-bottom:	5px solid #93c21e;
+}
+#wiki_content h2{
 	font-size:	1.5em;
-	line-height:	1.5em;
-	font-weight:	bold;
 	border-bottom:	2px solid #93c21e;
 }
-#wiki_content h3	{
+#wiki_content h3{
 	font-size:	1.2em;
-	line-height:	1.5em;
-	font-weight:	bold;
 	border-left:	5px solid #93c21e;
 	padding-left:	0.5em;
 }
-#wiki_content h4	{
+#wiki_content h4,
+#wiki_content h5{
 	font-size:	1em;
-	line-height:	1.5em;
-	font-weight:	bold;
 }
-#wiki_content h5	{
-	font-size:	1em;
-	line-height:	1.5em;
-	font-weight:	bold;
+
+/*段落*/
+#wiki_content p{
+	margin-bottom:1em;
 }
 
 /*リスト(スタイル)*/
@@ -179,7 +172,7 @@ h1.wiki_page_title{
 	padding-left:2.5em;
 }
 
-/* 引用----------------------- */
+/*引用*/
 #wiki_content blockquote{
 	background:url(blockquote.png) 0 0 no-repeat;
 	color:#555;
@@ -187,7 +180,21 @@ h1.wiki_page_title{
 	padding:0 0 0 6em;
 }
 
+/*水平線*/
+#wiki_content hr{
+	border:2px solid #CCC;
+	margin:0 0 10px 0;
+}
 
+/*リンク*/
+#wiki_content a{
+	color:#93c21e;
+	text-decoration:none;
+}
+#wiki_content a:hover{
+	color:#CCC;
+	text-decoration:none;
+}
 
 
 /* FOOTER - U2pedia
@@ -219,42 +226,35 @@ h1.wiki_page_title{
 	color:#CE3;
 }
 
-/*
-body
-{ 
-	background-color: White;
-    font-family: sans-serif;
-}
-*/
-.wmd-panel
-{
+
+
+
+/* なにこれ
+============================================================================*/
+.wmd-panel{
 	margin-left: 25%;
 	margin-right: 25%;
 	width: 50%;
 	min-width: 500px;
 }
 
-.wmd-button-bar 
-{
+.wmd-button-bar{
 	width: 100%;
 	background-color: Silver; 
 }
 
-.wmd-input 
-{ 
+.wmd-input{ 
 	height: 300px;
 	width: 100%;
 	background-color: Gainsboro;
 	border: 1px solid DarkGray;
 }
 
-.wmd-preview 
-{ 
+.wmd-preview{ 
 	background-color: #c0e0ff; 
 }
 
-.wmd-button-row 
-{
+.wmd-button-row{
 	position: relative; 
 	margin-left: 5px;
 	margin-right: 5px;
@@ -264,8 +264,7 @@ body
 	height: 20px;
 }
 
-.wmd-spacer
-{
+.wmd-spacer{
 	width: 1px; 
 	height: 20px; 
 	margin-left: 14px;
@@ -296,29 +295,17 @@ body
     display: inline-block;
 }
 
-.wmd-spacer1
-{
-    left: 50px;
-}
-.wmd-spacer2
-{
-    left: 175px;
-}
-.wmd-spacer3
-{
-    left: 300px;
-}
+.wmd-spacer1{ left: 50px; }
+.wmd-spacer2{ left: 175px; }
+.wmd-spacer3{ left: 300px; }
 
 
 
-
-.wmd-prompt-background
-{
+.wmd-prompt-background{
 	background-color: Black;
 }
 
-.wmd-prompt-dialog
-{
+.wmd-prompt-dialog{
 	border: 1px solid #999999;
 	background-color: #F5F5F5;
 }
