@@ -1,0 +1,19 @@
+%form{:action => wiki_page_compare_path, :method => "get"}
+  %table.wiki_history
+    %tr.wiki_history_header
+      %td= wt 'Version'
+      %td= wt 'Date'
+      %td= wt 'Author'
+      %td= wt 'Comment'
+    - versions.each do |v|
+      %tr
+        %td
+          = v.number
+          - if with_form
+            %input{:type => 'radio', :name => 'old', :value => v.number, :checked => (v == versions[-1] ? 'true' : nil)}
+            %input{:type => 'radio', :name => 'new', :value => v.number, :checked => (v == versions[-2] ? 'true' : nil)}
+        %td= l( v.updated_at, :format => :long )
+        %td= wiki_user( v.updator )
+        %td= v.comment
+  - if with_form
+    = submit_tag wt 'Compare selected versions'
