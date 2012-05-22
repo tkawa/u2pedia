@@ -16,6 +16,14 @@
         .left
           = link_to image_tag('logo.gif', :alt => 'U2plus'), 'http://u2plus.jp/'
         -#%p#u2Read うつ×認知行動療法×WEB×セラピスト
+        .login.right
+          - if current_user
+            = link_to image_tag(current_user.image, size: '20x20'), "https://twitter.com/#!/#{current_user.screen_name}", target: "_blank"
+            = current_user.screen_name
+            = button_to 'ログアウト', logout_path
+          - else
+            = link_to 'ログイン', '/auth/twitter'
+
       %header#headerPedia
         .left
           %h1= link_to 'うつペディア', wiki_page_path

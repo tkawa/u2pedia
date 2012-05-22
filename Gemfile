@@ -31,6 +31,8 @@ gem "rspec-rails", ">= 2.9.0", :group => [:development, :test]
 gem 'i18n_generators', :group => :development
 gem 'erb2haml', :group => :development
 gem 'rack-rewrite'
+gem 'omniauth-scaffold', :group => :development
+gem 'omniauth-twitter'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

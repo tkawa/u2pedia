@@ -11,30 +11,44 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120417022712) do
+ActiveRecord::Schema.define(:version => 20120522160000) do
+
+  create_table "users", :force => true do |t|
+    t.string   "provider",    :null => false
+    t.string   "uid",         :null => false
+    t.string   "name",        :null => false
+    t.string   "screen_name", :null => false
+    t.string   "image"
+    t.string   "token",       :null => false
+    t.string   "secret",      :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "users", ["provider", "uid"], :name => "index_users_on_provider_and_uid", :unique => true
 
   create_table "wiki_page_versions", :force => true do |t|
-    t.integer  "page_id",    :null => false
-    t.integer  "updator_id"
-    t.integer  "number"
-    t.string   "comment"
-    t.string   "path"
-    t.string   "title"
-    t.text     "content"
-    t.datetime "updated_at"
+    t.integer   "page_id",    :null => false
+    t.integer   "updator_id"
+    t.integer   "number"
+    t.string    "comment"
+    t.string    "path"
+    t.string    "title"
+    t.text      "content"
+    t.timestamp "updated_at"
   end
 
   add_index "wiki_page_versions", ["page_id"], :name => "index_wiki_page_versions_on_page_id"
   add_index "wiki_page_versions", ["updator_id"], :name => "index_wiki_page_versions_on_updator_id"
 
   create_table "wiki_pages", :force => true do |t|
-    t.integer  "creator_id"
-    t.integer  "updator_id"
-    t.string   "path"
-    t.string   "title"
-    t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer   "creator_id"
+    t.integer   "updator_id"
+    t.string    "path"
+    t.string    "title"
+    t.text      "content"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
   end
 
   add_index "wiki_pages", ["creator_id"], :name => "index_wiki_pages_on_creator_id"
