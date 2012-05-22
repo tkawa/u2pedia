@@ -1,17 +1,18 @@
-= wiki_page_style
 %h1.wiki_page_title= wt 'Creating a new wiki page'
 = wiki_page_form do |f|
   = f.hidden_field :previous_version_number, :value => f.object.last_version_number
-  %p
-    = wt 'Title:'
-    %br/
+  
+  .form_title
+    %label= wt 'Title:'
     = f.text_field :title
-  #wmd-preview
-  #wmd-button-bar
-  %p
-    = wt 'Content:'
-    %br/
+  
+  
+  .form_content
+    %label= wt 'Content:'
+    #wmd-preview
+    #wmd-button-bar
     = f.text_area :content, :id => 'wmd-input'
+  
   = f.hidden_field :comment, :value => 'First Revision'
   = hidden_field_tag :path, @page.path
   %input.submit{:type => "submit", :value => wt('Create page')}/

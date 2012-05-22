@@ -41,6 +41,9 @@ header#headerPedia{
 #headerPedia h1 a{ color:#93c21e; text-decoration:none; }
 #headerPedia p	{
 	color:	#666;
+	margin-top:.5em;
+	margin-bottom:1em;
+	margin-left:.25em;
 }
 
 #cse-search-form {
@@ -108,7 +111,39 @@ ul.wiki_page_actions{
 
 h1.wiki_page_title{
 	color:#93c21e;
+	font-size:2em;
+	font-weight:bold;
+	line-height:100%;
 	margin:0 0 .5em 0;
+}
+
+/* form#new_page
+----------------------------------------------------------------------------*/
+#wmd-preview{
+	border-left:5px solid #CCC;
+	padding-left:	0.5em;
+}
+#wmd-button-bar{
+	margin-bottom:10px;
+}
+
+#new_page label{
+	display:block;
+	font-size:	1.2em;
+	border-left:	5px solid #93c21e;
+	padding-left:	0.5em;
+	margin-bottom:.5em;
+}
+#new_page .form_title,
+#new_page .form_content{
+	margin-bottom:20px;
+}
+#new_page input#page_title,
+#new_page textarea#wmd-input{
+	width:80%;
+	border:1px solid #CCC;
+	line-height:150%;
+	padding:1px;
 }
 
 
@@ -151,7 +186,7 @@ h1.wiki_page_title{
 
 /*段落*/
 #wiki_content p{
-	margin-bottom:1em;
+	margin-bottom:10px;
 }
 
 /*リスト(スタイル)*/
@@ -166,6 +201,7 @@ h1.wiki_page_title{
 #wiki_content ul,
 #wiki_content ol{
 	padding-left:2em;
+	margin-bottom:10px;
 }
 #wiki_content ul ul,
 #wiki_content ol ol{
@@ -176,7 +212,7 @@ h1.wiki_page_title{
 #wiki_content blockquote{
 	background:url(blockquote.png) 0 0 no-repeat;
 	color:#555;
-	margin:0;
+	margin:0 0 10px 0;
 	padding:0 0 0 6em;
 }
 
@@ -202,6 +238,7 @@ h1.wiki_page_title{
 #subFooter	{
 	border-top:	1px solid #93c21e;
 	border-bottom:	10px solid #93c21e;
+	padding:1em 0;
 	/* ↓ストライプ背景↓ */
 	background-color: #f0ffc9;
 	background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #ffffff), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #ffffff),color-stop(.75, #ffffff), color-stop(.75, transparent),to(transparent));
