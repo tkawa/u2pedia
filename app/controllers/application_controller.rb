@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :ssl_redirect if Rails.env.production?
+  #before_filter :ssl_redirect if Rails.env.production?
   before_filter :reset_session_expires
 
   private
