@@ -19,4 +19,4 @@ production:
   twitter:
     key: <%= ENV['TWITTER_KEY'] %>
     secret: <%= ENV['TWITTER_SECRET'] %>
-  allow_users: <%= ENV['ALLOW_USERS'] %>
+  allow_users: <%= ENV['ALLOW_USERS'].inspect %>
