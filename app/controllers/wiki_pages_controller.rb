@@ -3,10 +3,14 @@ class WikiPagesController < ApplicationController
 
   protected
   def edit_allowed?
-    ! @page.toppage? # not allowed on top page
+    ! (@page.toppage? && (current_user.nil? || !allow_users.include?(current_user.uid))) # not allowed on top page
   end
   def destroy_allowed?
     false
   end
 
+  private
+  def allow_users
+    ENV['ALLOW_USERS'].try {|u| u.split(',') } || []
+  end
 end
