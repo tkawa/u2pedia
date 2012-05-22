@@ -11,6 +11,6 @@ class WikiPagesController < ApplicationController
 
   private
   def allow_users
-    ENV['ALLOW_USERS'].try {|u| u.split(',') } || []
+    Settings['allow_users'].try {|u| u.split(',') } || []
   end
 end

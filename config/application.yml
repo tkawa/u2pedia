@@ -5,6 +5,7 @@ defaults: &defaults
   twitter:
     key: 'development_key'
     secret: 'development_secret'
+  allow_users: '18569149,282933021,213973213'
 
 development:
   <<: *defaults
@@ -18,3 +19,4 @@ production:
   twitter:
     key: <%= ENV['TWITTER_KEY'] %>
     secret: <%= ENV['TWITTER_SECRET'] %>
+  allow_users: <%= ENV['ALLOW_USERS'] %>
