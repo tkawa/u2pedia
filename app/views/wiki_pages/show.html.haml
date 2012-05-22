@@ -1,9 +1,7 @@
 - content_for :wiki_page do
   #wiki_page
-    %p.wiki_page_info
-      =(wt "Revised on %{time} by %{user}", :time => l( @page.updated_at, :format => :long ), :user => wiki_user( @page.updator ) ).html_safe
+    = wiki_page_info
     = wiki_page_actions
-  
 
 %article#wiki_content
   %h1= h @page.title

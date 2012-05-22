@@ -68,7 +68,7 @@ td.gsc-clear-button {
 }
 
 /*wiki_page_info*/
-p.wiki_page_info{	
+.wiki_page_info{	
 	float:left;
 	color:#93c21e;
 	margin:0;	
@@ -117,37 +117,135 @@ h1.wiki_page_title{
 	margin:0 0 .5em 0;
 }
 
-/* form#new_page
+
+/* history
 ----------------------------------------------------------------------------*/
+table.wiki_history{
+	width:100%;
+	border-collapse:collapse;
+	margin-bottom:20px;
+}
+tr.wiki_history_header{
+	background-color:#E9E9E9;
+	color:#333;
+	text-align:center;
+	font-weight:bold;
+}
+table.wiki_history td{
+	border:1px solid #CCC;
+	padding:5px;
+}
+
+
+/* new, edit
+----------------------------------------------------------------------------*/
+#new_page label,
+#edit_page label{
+	display:block;
+	font-weight:bold;
+	border-left:	5px solid #93c21e;
+	padding:0 0.5em;
+	margin-bottom:.5em;
+}
+.form_title,
+.form_content,
+.form_comment{
+	margin-bottom:20px;
+}
+input#page_title,
+textarea#wmd-input,
+input#page_comment{
+	width:99%;
+	border:1px solid #CCC;
+	line-height:150%;
+	padding:5px;
+}
 #wmd-preview{
-	border-left:5px solid #CCC;
-	padding-left:	0.5em;
+	border-left:5px solid #E9E9E9;
+	padding:1em 0.5em;
 }
 #wmd-button-bar{
 	margin-bottom:10px;
 }
 
-#new_page label{
-	display:block;
+/*preview*/
+#wiki_content.preview{
+	border:20px solid #E9E9E9;
+	margin-bottom:30px;
+	padding:20px;
+}
+#wiki_content.preview p.title{
+	color:#CCC;
+	font:bold 3em/60% Arial, Helvetica, sans-serif;
+	text-align:right;
+}
+
+
+/* wmd-preview(ライブビュー)
+----------------------------------------------------------------------------*/
+/*見出し*/
+#wmd-preview h1,
+#wmd-preview h2,
+#wmd-preview h3,
+#wmd-preview h4,
+#wmd-preview h5,
+#wmd-preview h6{
+	line-height:1.5em;
+	font-weight:	bold;
+	margin:0 0 10px 0;
+}
+#wmd-preview h1{
+	font-size:	1.8em;
+}
+#wmd-preview h2{
+	font-size:	1.5em;
+}
+#wmd-preview h3{
 	font-size:	1.2em;
-	border-left:	5px solid #93c21e;
-	padding-left:	0.5em;
-	margin-bottom:.5em;
 }
-#new_page .form_title,
-#new_page .form_content{
-	margin-bottom:20px;
+
+/*段落*/
+#wmd-preview p{
+	margin-bottom:10px;
 }
-#new_page input#page_title,
-#new_page textarea#wmd-input{
-	width:80%;
-	border:1px solid #CCC;
-	line-height:150%;
-	padding:1px;
+
+/*強調*/
+#wmd-preview strong{ font-weight:bold; }
+#wmd-preview em{ font-style:italic; }
+
+/*リンク*/
+#wmd-preview a{ color:#93c21e; text-decoration:none; }
+#wmd-preview a:hover{ color:#CCC; text-decoration:none; }
+
+/*引用*/
+#wmd-preview blockquote{
+	margin:0 0 10px 0;
+	padding:0 0 0 6em;
+}
+
+/*リスト(スタイル)*/
+#wmd-preview ul{ list-style-type: disc; }
+#wmd-preview ol{ list-style-type:decimal; }
+
+/*リスト(インデント)*/
+#wmd-preview ul,
+#wmd-preview ol{
+	padding-left:2em;
+	margin-bottom:10px;
+}
+#wmd-preview ul ul,
+#wmd-preview ol ol{
+	padding-left:2.5em;
+}
+
+/*水平線*/
+#wmd-preview hr{
+	margin:0 0 10px 0;
 }
 
 
-/* 本文スタイル
+
+/* wiki_content(本文スタイル)
 ----------------------------------------------------------------------------*/
 #wiki_content{
 	font-size:	1em;
@@ -161,7 +259,8 @@ h1.wiki_page_title{
 #wiki_content h2,
 #wiki_content h3,
 #wiki_content h4,
-#wiki_content h5{
+#wiki_content h5,
+#wiki_content h6{
 	line-height:1.5em;
 	font-weight:	bold;
 	margin:0 0 10px 0;
@@ -179,23 +278,31 @@ h1.wiki_page_title{
 	border-left:	5px solid #93c21e;
 	padding-left:	0.5em;
 }
-#wiki_content h4,
-#wiki_content h5{
-	font-size:	1em;
-}
 
 /*段落*/
 #wiki_content p{
 	margin-bottom:10px;
 }
 
+/*強調*/
+#wiki_content strong{ font-weight:bold; }
+#wiki_content em{ font-style:italic; }
+
+/*リンク*/
+#wiki_content a{ color:#93c21e; text-decoration:none; }
+#wiki_content a:hover{ color:#CCC; text-decoration:none; }
+
+/*引用*/
+#wiki_content blockquote{
+	background:url(blockquote.png) 0 0 no-repeat;
+	color:#555;
+	margin:0 0 10px 0;
+	padding:0 0 0 6em;
+}
+
 /*リスト(スタイル)*/
-#wiki_content ul{
-	list-style-type: disc;
-}
-#wiki_content ol	{
-	list-style-type:decimal;
-}
+#wiki_content ul{ list-style-type: disc; }
+#wiki_content ol{ list-style-type:decimal; }
 
 /*リスト(インデント)*/
 #wiki_content ul,
@@ -208,28 +315,10 @@ h1.wiki_page_title{
 	padding-left:2.5em;
 }
 
-/*引用*/
-#wiki_content blockquote{
-	background:url(blockquote.png) 0 0 no-repeat;
-	color:#555;
-	margin:0 0 10px 0;
-	padding:0 0 0 6em;
-}
-
 /*水平線*/
 #wiki_content hr{
 	border:2px solid #CCC;
 	margin:0 0 10px 0;
-}
-
-/*リンク*/
-#wiki_content a{
-	color:#93c21e;
-	text-decoration:none;
-}
-#wiki_content a:hover{
-	color:#CCC;
-	text-decoration:none;
 }
 
 

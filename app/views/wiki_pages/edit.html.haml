@@ -1,33 +1,36 @@
 %h1.wiki_page_title= wt 'Editing wiki page'
 - if params[:preview]
-  .wiki_content
+  #wiki_content.preview
+    %p.title Preview
     = wiki_content @page.content
+
 = wiki_page_form do |f|
   = f.hidden_field :previous_version_number, :value => f.object.last_version_number
   = hidden_field_tag :path, @page.path
-  %p
-    = wt 'Title:'
-    %br/
+
+  .form_title
+    %label= wt 'Title:'
     = f.text_field :title
-  #wmd-preview
-  #wmd-button-bar
-  /
-    If our 'content' contains newlines, Erubis will indent them (to make the
-    produced HTML look nicer). However those indenting spaces *will* appear
-    in the textarea in the user's browser and will get POSTed by the browser
-    when submitting the form and thus would get written to the wiki content
-    into the database.  The gsub's below replace the linebreaks ('\r\n')
-    with UTF8 linefeeds (same way HAML solves this problem), which are
-    ignored by Erubis and should be correctly displayed as linebreaks by
-    modern browsers.
-  %p
-    = wt 'Content:'
-    %br/
+    
+  .form_content
+    %label= wt 'Content:'
+    #wmd-preview
+    #wmd-button-bar
+    /
+      If our 'content' contains newlines, Erubis will indent them (to make the
+      produced HTML look nicer). However those indenting spaces *will* appear
+      in the textarea in the user's browser and will get POSTed by the browser
+      when submitting the form and thus would get written to the wiki content
+      into the database.  The gsub's below replace the linebreaks ('\r\n')
+      with UTF8 linefeeds (same way HAML solves this problem), which are
+      ignored by Erubis and should be correctly displayed as linebreaks by
+      modern browsers.
     = f.text_area(:content, :id => 'wmd-input').gsub("\n", '&#x000A;').gsub("\r",'').html_safe
-  %p
-    = wt 'Comment on this change (optional):'
-    %br/
+
+  .form_comment
+    %label= wt 'Comment on this change (optional):'
     = f.text_field :comment
+
   %input.submit{:name => "save", :type => "submit", :value => wt('Save page')}/
   %input.submit{:name => "preview", :type => "submit", :value => wt('Preview')}/
   %input.submit{:name => "cancel", :type => "submit", :value => wt('Cancel')}/
