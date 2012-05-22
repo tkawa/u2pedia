@@ -3,7 +3,7 @@ class WikiPagesController < ApplicationController
 
   protected
   def edit_allowed?
-    @page.path != '' # not allowed on top page
+    ! @page.toppage? # not allowed on top page
   end
   def destroy_allowed?
     false

@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/tkawa/irwi.git
-  revision: c484b74fc80a04fb06e3349c9cc747c9ff09d742
+  revision: 69025b3056d59c44a098ff04cde8b0dbd9b4c88e
   specs:
     irwi (0.4.2)
       actionpack (>= 3.0.0)

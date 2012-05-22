@@ -1,9 +1,14 @@
 !!!
 %html
   %head
-    %title= @page ? "#{@page.title} - うつペディア" : 'うつペディア'
+    - if @page.toppage?
+      %title うつペディア - みんなで作るうつ情報wiki辞典 | 認知行動療法のU2plus
+    - else
+      %title= @page ? "#{@page.title} - うつペディア" : 'うつペディア'
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
+    - if @page.toppage?
+      %meta{:content => "うつの症状、傷病手当、自立支援申請、服薬、リラクゼーション、休職中の過ごし方など、みんなでつくるうつ情報と体験談のページです。ワンストップでうつに関する情報を提供できることを目的としています。", :name => "description"}
     = csrf_meta_tags
   %body{:class => "#{controller_name} #{controller_name}_#{action_name}"}
     #wrapper
