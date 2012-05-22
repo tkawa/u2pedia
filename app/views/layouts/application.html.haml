@@ -20,7 +20,7 @@
           - if current_user
             = link_to image_tag(current_user.image, size: '20x20'), "https://twitter.com/#!/#{current_user.screen_name}", target: "_blank"
             = current_user.screen_name
-            = button_to 'ログアウト', logout_path
+            = button_to 'ログアウト', logout_path, :method => :delete
           - else
             = link_to 'ログイン', '/auth/twitter'
 
