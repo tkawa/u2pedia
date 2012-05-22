@@ -22,7 +22,8 @@
             = current_user.screen_name
             = button_to 'ログアウト', logout_path, :method => :delete
           - else
-            = link_to 'ログイン', '/auth/twitter'
+            /
+              = link_to 'ログイン', '/auth/twitter'
 
       %header#headerPedia
         .left
