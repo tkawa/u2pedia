@@ -10,6 +10,17 @@
     - if @page && @page.toppage?
       %meta{:content => "うつの症状、傷病手当、自立支援申請、服薬、リラクゼーション、休職中の過ごし方など、みんなでつくるうつ情報と体験談のページです。ワンストップでうつに関する情報を提供できることを目的としています。", :name => "description"}
     = csrf_meta_tags
+    :javascript
+      if (window.location.hostname == 'u2pedia.u2plus.jp') {
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-22159720-7']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      }
   %body{:class => "#{controller_name} #{controller_name}_#{action_name}"}
     #wrapper
       %header#headerU2plus
