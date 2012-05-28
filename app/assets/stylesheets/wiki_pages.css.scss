@@ -105,6 +105,7 @@ ul.wiki_page_actions{
 /* MAIN
 ============================================================================*/
 #main{
+	overflow:hidden;
 	margin:0;
 	padding:30px;
 }
@@ -116,6 +117,31 @@ h1.wiki_page_title{
 	line-height:100%;
 	margin:0 0 .5em 0;
 }
+
+/* sidebar
+----------------------------------------------------------------------------*/
+#wiki_content{
+	float:right;
+	width:72%;
+}
+
+#subMenu{
+	float:left;
+	width:22%;
+	background-color:#93c21e;
+	padding:2% 2% 2% 30px;
+	position:relative;
+	left:-30px;
+}
+
+#subMenu h1{
+	color:#FFF;
+	font-size:2em;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:10px;
+}
+
 
 
 /* history
