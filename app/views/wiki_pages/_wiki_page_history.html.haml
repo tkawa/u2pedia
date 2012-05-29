@@ -1,4 +1,4 @@
-%form{:action => wiki_page_compare_path, :method => "get"}
+%form{:action => compare_wiki_page_path(:path => @page.path), :method => "get"}
   %table.wiki_history
     %tr.wiki_history_header
       %td= wt 'Version'
