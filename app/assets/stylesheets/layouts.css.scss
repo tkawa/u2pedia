@@ -15,13 +15,14 @@
 header#headerU2plus{
 	overflow:hidden;
 	border-top:6px solid #1F276F;
+	border-bottom:2px dashed #E9E9E9;
 }
 header#headerU2plus .left{
-	padding:30px 0 0 30px;
+	padding:15px 30px;
 }
-header#headerU2plus .left h1{
-	width:202px;
-	height:60px;
+header#headerU2plus .left img{
+	width:100px;
+	height:30px;
 }
 
 

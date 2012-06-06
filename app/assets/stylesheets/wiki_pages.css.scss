@@ -105,6 +105,7 @@ ul.wiki_page_actions{
 /* MAIN
 ============================================================================*/
 #main{
+	overflow:hidden;
 	margin:0;
 	padding:30px;
 }
@@ -116,6 +117,71 @@ h1.wiki_page_title{
 	line-height:100%;
 	margin:0 0 .5em 0;
 }
+
+/* sidebar
+----------------------------------------------------------------------------*/
+#wiki_content{
+	float:right;
+	width:72%;
+}
+
+#subMenu{
+	float:left;
+	width:22%;
+	background-color:#93c21e;
+	padding:2% 2% 2% 30px;
+	position:relative;
+	left:-30px;
+}
+
+#subMenu h1{
+	background:url(sidebar/bookmark.png) left center no-repeat;
+	background-size:30px;
+	-webkit-background-size:30px;
+	-moz-background-size:30px;
+	-o-background-size:30px;
+	-ms-background-size:30px;
+	color:#FFF;
+	font-size:1.8em;
+	font-weight:bold;
+	line-height:30px;
+	margin-bottom:1em;
+	padding-left:30px;
+}
+
+#subMenu h2{
+	background-color:#FFF;
+	background: -moz-linear-gradient(top, #FFF, #CCA);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#AAC));
+	color:#630;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	margin-bottom:.5em;
+}
+#subMenu h2 a{
+	display:block;
+	background:url(sidebar/play.png) 99% center no-repeat;
+	background-size:18px;
+	-webkit-background-size:18px;
+	-moz-background-size:18px;
+	-o-background-size:18px;
+	-ms-background-size:18px;
+	color:#680;
+	font-size:1.2em;
+	line-height:100%;
+	padding:10px;
+}
+#subMenu h2 a:hover{
+	display:block;
+	color:#999;
+}
+#subMenu ul{
+	color:#FFF;
+	text-shadow:1px 1px 1px #999;	
+	margin-bottom:30px;
+}
+
 
 
 /* history
