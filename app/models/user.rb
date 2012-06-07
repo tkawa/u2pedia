@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :provider, :uid, :name, :screen_name, :image, :token, :secret
 
-  private
-
   #---------------------------#
   # self.create_with_omniauth #
   #---------------------------#
@@ -25,6 +23,12 @@ class User < ActiveRecord::Base
     user.save
 
     return user
+  end
+
+  @@allow_users = nil
+  def edit_allowed?
+    @@allow_users ||= (Settings['allow_users'].try {|u| u.split(',') } || [])
+    @@allow_users.include?(uid)
   end
 
 end

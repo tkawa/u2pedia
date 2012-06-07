@@ -27,3 +27,4 @@ ja:
     "Create page": :helpers.submit.create
     "Title:": :activerecord.attributes.wiki_page.title
     "Content:": :activerecord.attributes.wiki_page.content
+    "Destroy Confirm": 元に戻すことはできません。削除してよろしいですか？
