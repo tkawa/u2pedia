@@ -2,7 +2,7 @@
 %html
   %head
     - if @page && @page.toppage?
-      %title うつペディア - みんなで作るうつ情報wiki辞典 | 認知行動療法のU2plus
+      %title うつペディア - みんなで作るうつ情報wiki事典 | 認知行動療法のU2plus
     - else
       %title= @page ? "#{@page.title} - うつペディア" : 'うつペディア'
     = stylesheet_link_tag    "application", :media => "all"
@@ -58,8 +58,6 @@
         .logo
           = link_to image_tag('logo_foot.gif', :alt => 'U2plus'), 'http://u2plus.jp/'
         %ul.nfoot
-          %li= link_to '利用規約', 'http://u2plus.jp/tos'
-          %li= link_to 'プライバシーポリシー', 'http://u2plus.jp/privacy'
           %li= link_to '運営会社', 'http://u2plus.co.jp/'
           %li= link_to 'お問い合わせ', 'http://u2plus.jp/contact'
           %li= link_to 'ブログ', 'http://blog.u2plus.jp'
