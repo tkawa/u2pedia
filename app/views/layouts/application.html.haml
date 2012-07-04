@@ -5,6 +5,7 @@
       %title うつペディア - みんなで作るうつ情報wiki事典 | 認知行動療法のU2plus
     - else
       %title= @page ? "#{@page.title} - うつペディア" : 'うつペディア'
+    %link(rel="apple-touch-icon" href="apple-touch-icon.png")
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     - if @page && @page.toppage?
@@ -40,7 +41,8 @@
 
       %header#headerPedia
         .left
-          %h1= link_to 'うつペディア', wiki_page_path
+          %h1
+            = link_to image_tag('logo_word.png', :alt => 'うつペディア'), wiki_page_path
           %p みんなで情報をあつめるという特性上、情報の正確性は保証できません
         #cse-search-form.right
     
