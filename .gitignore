@@ -17,3 +17,7 @@
 .rvmrc
 .DS_Store
 ._*
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
