@@ -27,16 +27,24 @@ body	{
 ============================================================================*/
 header#headerPedia{
 	overflow:hidden;
-	background:url(tree.png) 30px bottom no-repeat scroll;
+	background:url(logo_mark.png) 30px center no-repeat scroll;
+	background-size:80px;
+	-webkit-background-size:80px;
+	-moz-background-size:80px;
+	-o-background-size:80px;
+	-ms-background-size:80px;
 	border-bottom:10px solid #93c21e;
+	height:80px;
 	margin:0;
-	padding:30px 30px 0 130px;
+	padding:15px 30px 15px 130px;
 }
-#headerPedia h1	{
-	font-size:2em;
-	font-weight:bold;
+#headerPedia h1{
 	line-height:100%;
-	margin:0;
+	margin-top:10px;
+}
+#headerPedia h1 img{
+	width:200px;
+	height:39px;
 }
 #headerPedia h1 a{ color:#93c21e; text-decoration:none; }
 #headerPedia p	{
