@@ -8,7 +8,8 @@ class WikiPagesController < ApplicationController
 
   protected
   def edit_allowed?
-    !@page.toppage? || destroy_allowed? # not allowed on top page
+    destroy_allowed?
+    #!@page.toppage? || destroy_allowed? # not allowed on top page
   end
   def destroy_allowed?
     current_user.try(:edit_allowed?)
