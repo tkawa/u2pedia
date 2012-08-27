@@ -7,7 +7,7 @@ module ApplicationHelper
 
   def twitter_share_button(url='http://u2pedia.u2plus.jp/wiki', title='U2pedia', user='youutubu_U2plus')
     <<-EOS.html_safe
-      <a class="twitter-share-button" href="http://twitter.com/share" data-via="#{user}" data-lang="ja" data-related="goods_U2plus">
+      <a class="twitter-share-button" href="http://twitter.com/share" data-url="http://u2pedia.u2plus.jp/wiki" data-via="#{user}" data-lang="ja" data-related="goods_U2plus">
       </a>
     EOS
   end
@@ -20,7 +20,7 @@ module ApplicationHelper
   
   def google_plus_button()
     <<-EOS.html_safe
-      <div class="g-plusone" data-size="medium">
+      <div class="g-plusone" data-size="medium" data-href="http://u2pedia.u2plus.jp/wiki">
     EOS
   end
 
