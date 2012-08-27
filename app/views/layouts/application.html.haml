@@ -7,6 +7,7 @@
       %title うつペディア - みんなで作るうつ情報wiki事典 | 認知行動療法のU2plus
     - else
       %title= @page ? "#{@page.title} - うつペディア" : 'うつペディア'
+    %meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
     %meta{:property => 'og:title', :content => 'うつペディア - みんなで作るうつ情報wiki事典 | 認知行動療法のU2plus'}
     %meta{:property => 'og:type', :content => 'website'}
     %meta{:property => 'og:image', :content => '/assets/logo_word.png'}
@@ -59,7 +60,7 @@
             %li
               = facebook_like_button
             %li
-              = twitter_share_button
+              = twitter_share_button('','うつペディア - みんなで作るうつ情報wiki事典 | 認知行動療法のU2plus')
               = twitter_share_button_script
             %li
               = google_plus_button
