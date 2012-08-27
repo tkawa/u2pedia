@@ -60,6 +60,20 @@ header#headerPedia{
 td.gsc-clear-button {
   display: none;
 }
+#socialicon ul {
+  width: 250px;
+  margin-top:4px;
+}
+#socialicon li {
+  height:24px;
+  display:inline;
+  float:left;
+  padding:2px 0 0 5px;
+}
+#socialicon li.share {
+  margin-left:2px;
+  margin-right:5px;
+}
 
 /*topics*/
 #topics h2{

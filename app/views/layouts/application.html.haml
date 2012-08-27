@@ -1,10 +1,19 @@
 !!!
-%html
+%html{"xmlns:og" => "http://ogp.me/ns#",
+  "xmlns:fb" => "http://www.facebook.com/2008/fbml",
+  "xmlns:mixi" => "http://mixi-platform.com/ns#"}
   %head
     - if @page && @page.toppage?
       %title うつペディア - みんなで作るうつ情報wiki事典 | 認知行動療法のU2plus
     - else
       %title= @page ? "#{@page.title} - うつペディア" : 'うつペディア'
+    %meta{:property => 'og:title', :content => 'うつペディア - みんなで作るうつ情報wiki事典 | 認知行動療法のU2plus'}
+    %meta{:property => 'og:type', :content => 'website'}
+    %meta{:property => 'og:image', :content => '/assets/logo_word.png'}
+    %meta{:property => 'og:url', :content => 'http://u2pedia.u2plus.jp/wiki'}
+    %meta{:property => 'og:site_name', :content => 'U2pedia'}
+    %meta{:property => 'og:description',
+      :content => 'うつの症状、傷病手当、自立支援申請、服薬、リラクゼーション、休職中の過ごし方など、みんなでつくるうつ情報と体験談のページです。ワンストップでうつに関する情報を提供できることを目的としています。'}
     %link(rel="apple-touch-icon" href="apple-touch-icon.png")
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
@@ -45,7 +54,22 @@
             = link_to image_tag('logo_word.png', :alt => 'うつペディア'), wiki_page_path
           %p みんなで情報をあつめるという特性上、情報の正確性は保証できません
         #cse-search-form.right
-    
+        #socialicon.right
+          %ul
+            %li
+              = facebook_like_button
+            %li
+              = twitter_share_button
+              = twitter_share_button_script
+            %li.share
+              = mixi_check_button
+              = mixi_check_button_script
+            %li.share
+              = facebook_share_button
+            %li
+              = google_plus_button
+              = google_plus_button_script
+
       - if content_for? :wiki_page
         = yield :wiki_page
 
