@@ -61,6 +61,35 @@ td.gsc-clear-button {
   display: none;
 }
 
+/*topics*/
+#topics h2{
+	font-size:1.2em;
+	font-weight:bold;
+        color:#000;
+	width:800px;
+	margin:2em 0 9px 6em;
+	border-bottom:2px solid #93c21e;
+}
+#topics ul{
+	font-size:1em;
+	color:#000;
+	list-style-type:disc;
+	overflow:hidden;
+	margin:0 0 8px 3em;
+}
+#topics li{
+	float:left;
+	margin:0 0 0 6em;
+}
+#topics a, a:link, a:active, a:visited{
+	color:#93c21e;
+	/* border-bottom:1px solid #93c21e; */
+}
+#topics a:hover{
+	color:#CCC;
+	/* border-bottom:none; */
+}
+
 /* WIKI_PAGE
 ============================================================================*/
 #wiki_page{
