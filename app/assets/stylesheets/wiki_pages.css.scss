@@ -263,10 +263,27 @@ table.wiki_history td{
 	padding:0 0.5em;
 	margin-bottom:.5em;
 }
+#edit_page label.recaptcha_input_area_text{
+	display:block;
+	font-weight:bold;
+	border-left:	5px solid #FFF;
+	padding:0 0.5em;
+	margin-bottom:.5em;
+}
+#edit_page div.recaptcha_input_area{
+}
 .form_title,
 .form_content,
 .form_comment{
 	margin-bottom:20px;
+}
+#edit_page .submit{
+	margin-top:5px;
+	margin-left:3px;
+}
+#edit_page .alert{
+        font-size:0.9em;
+        color:#CC0000;
 }
 input#page_title,
 textarea#wmd-input,

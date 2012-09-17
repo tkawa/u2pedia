@@ -31,7 +31,14 @@
     %label= wt 'Comment on this change (optional):'
     = f.text_field :comment
 
-  %input.submit{:name => "save", :type => "submit", :value => wt('Save page')}/
-  %input.submit{:name => "preview", :type => "submit", :value => wt('Preview')}/
-  %input.submit{:name => "cancel", :type => "submit", :value => wt('Cancel')}/
+  .recaptcha
+    %label= wt 'Prove not robot'
+    - if alert
+      %p.alert= wt alert
+    = raw recaptcha_tag(:ajax, :display=>{:theme=>'white'})
+
+  .submit
+    %input.submit{:name => "save", :type => "submit", :value => wt('Save page')}/
+    %input.submit{:name => "preview", :type => "submit", :value => wt('Preview')}/
+    %input.submit{:name => "cancel", :type => "submit", :value => wt('Cancel')}/
 = wiki_page_attachments(@page)

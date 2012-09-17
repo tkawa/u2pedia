@@ -1,4 +1,6 @@
 module WikiPagesHelper
+  include Rack::Recaptcha::Helpers
+
   acts_as_wiki_pages_helper
 
   def wiki_user( user )
