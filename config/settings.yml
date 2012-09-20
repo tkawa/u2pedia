@@ -1,5 +1,9 @@
 secret_token: <%= ENV['SECRET_TOKEN'] %>
 
+recaptcha:
+  public_key: <%= ENV['RECAPTCHA_PUBLIC_KEY'] %>
+  private_key: <%= ENV['RECAPTCHA_PRIVATE_KEY'] %>
+
 twitter:
   key: <%= ENV['TWITTER_KEY'] %>
   secret: <%= ENV['TWITTER_SECRET'] %>

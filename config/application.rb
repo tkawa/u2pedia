@@ -68,8 +68,5 @@ module U2pedia
         rack_env['SERVER_NAME'] == 'u2pedia.herokuapp.com'
       }
     end
-
-    config.gem 'rack-recaptcha', :lib => 'rack/recaptcha'
-    config.middleware.use Rack::Recaptcha, :public_key => '6Lcl4dUSAAAAAK8GQz5gSAOrUP7m6cVtAtMkLl-h', :private_key => '6Lcl4dUSAAAAAAMHV_TF6yWrefTVxszG1JuEJkqn'
   end
 end
