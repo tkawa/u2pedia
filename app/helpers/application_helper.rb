@@ -1,4 +1,16 @@
 module ApplicationHelper
+  # 各種ソーシャルボタン
+  def hatena_bookmark_button(url='http://u2pedia.u2plus.jp/wiki')
+    <<-EOS.html_safe
+      <a class="hatena-bookmark-button" href="http://b.hatena.ne.jp/entry/#{url}" data-hatena-bookmark-layout="standard">
+        <img src="http://b.st-hatena.com/images/entry-button/button-only.gif" width="18" height="18" />
+      </a>
+    EOS
+  end
+  def hatena_bookmark_button_script
+    '<script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button_wo_al.js" charset="utf-8" async="async"></script>'.html_safe
+  end
+
   def facebook_like_button(url="http://u2pedia.u2plus.jp/wiki")
     <<-EOS.html_safe
       <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fu2pedia.u2plus.jp&amp;send=false&amp;layout=button_count&amp;width=110&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
@@ -45,5 +57,42 @@ module ApplicationHelper
 
   def mixi_check_button_script
     '<script type="text/javascript" src="http://static.mixi.jp/js/share.js"></script>'.html_safe
+  end
+  
+  #ガジェット
+  def facebook_gadget
+    '<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FU2plus&amp;width=280&amp;height=450&amp;colorscheme=light&amp;show_faces=true&amp;border_color=gainsboro&amp;stream=false&amp;header=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:280px; height:450px; background:#FFF;" allowTransparency="true"></iframe>'.html_safe
+  end
+  def twitter_gadget
+    <<-EOS.html_safe
+      <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+      <script>
+      new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: 4,
+        interval: 30000,
+        width: 280,
+        height: 450,
+        theme: {
+          shell: {
+            background: '#55B3CF',
+            color: '#FFF'
+          },
+          tweets: {
+            background: '#FFF',
+            color: '#333',
+            links: '#55B3CF'
+          }
+        },
+        features: {
+          scrollbar: false,
+          loop: false,
+          live: false,
+          behavior: 'all'
+        }
+      }).render().setUser('youutubu_U2plus').start();
+      </script>
+    EOS
   end
 end

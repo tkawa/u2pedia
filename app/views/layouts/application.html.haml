@@ -37,9 +37,49 @@
   %body{:class => "#{controller_name} #{controller_name}_#{action_name}"}
     #wrapper
       %header#headerU2plus
-        .left
-          = link_to image_tag('logo.png', :alt => 'U2plus'), 'http://u2plus.jp/'
-        -#%p#u2Read うつ×認知行動療法×WEB×セラピスト
+        .left 
+          = link_to 'http://u2plus.jp' do
+            = image_tag 'logo.png', :alt => 'U2plus'
+        
+        .toptabs
+          .logging
+            = link_to 'http://u2plus.jp/user/sign_in' do
+              ログイン
+              %span (アカウントをお持ちの方)
+          
+          %ul.navtext
+            %li.price
+              = link_to 'http://u2plus.jp/pages/7-price' do
+                価格表
+                %span ¥0,¥470,¥970/月
+            %li.sign_up
+              = link_to 'http://u2plus.jp/user/sign_up' do
+                新規登録
+                %span 無料でスタート!
+          
+          .socialicon
+            %ul
+              %li
+                = facebook_like_button
+              %li
+                = twitter_share_button('','うつペディア - みんなで作るうつ情報wiki事典 | 認知行動療法のU2plus')
+                = twitter_share_button_script
+              -#%li
+                = google_plus_button
+                = google_plus_button_script
+              %li
+                = hatena_bookmark_button
+                = hatena_bookmark_button_script
+              %li
+                = facebook_share_button
+              %li
+                = mixi_check_button
+                = mixi_check_button_script
+          
+        .fortopnews
+          = link_to 'http://u2plus.jp/pages/recommend' do
+            = image_tag 'recommend.png', :alt => '「うつで困っている」人がいたらオススメしてみませんか？'
+          
         .login.right
           - if current_user
             = link_to image_tag(current_user.image, size: '20x20'), "https://twitter.com/#{current_user.screen_name}", target: "_blank"
@@ -55,21 +95,6 @@
             = link_to image_tag('logo_word.png', :alt => 'うつペディア'), wiki_page_path
           %p みんなで情報をあつめるという特性上、情報の正確性は保証できません
         #cse-search-form.right
-        #socialicon.right
-          %ul
-            %li
-              = facebook_like_button
-            %li
-              = twitter_share_button('','うつペディア - みんなで作るうつ情報wiki事典 | 認知行動療法のU2plus')
-              = twitter_share_button_script
-            %li
-              = google_plus_button
-              = google_plus_button_script
-            %li.share
-              = mixi_check_button
-              = mixi_check_button_script
-            %li.share
-              = facebook_share_button
 
       - if content_for? :wiki_page
         = yield :wiki_page
@@ -90,6 +115,20 @@
       #subFooter
         %p#goTop
           = link_to '上へ', '#wrapper'
+
+      #information
+        %ul.navi.columnfor3
+          %li.blog
+            %div
+              %h3= link_to 'ゆううつ部 ブログ', 'http://blog.u2plus.jp/', :target=>["_blank"]
+              %p
+                %span= link_to 'http://blog.u2plus.jp/', 'http://blog.u2plus.jp/', :target=>["_blank"]
+
+              %p U2plusスタッフ＝通称・ゆううつ部が<br />開発やセミナーなどのU2plus最新情報<br />うつ病に関するアレコレを更新中！
+          %li
+            = facebook_gadget
+          %li
+            = twitter_gadget
       
       %footer
         .logo

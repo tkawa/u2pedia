@@ -10,6 +10,7 @@
 .left{ float:left; }
 .right{ float:right; }
 
+
 /* HEADER - U2plus
 ============================================================================*/
 header#headerU2plus{
@@ -18,11 +19,190 @@ header#headerU2plus{
 	border-bottom:2px dashed #E9E9E9;
 }
 header#headerU2plus .left{
-	padding:15px 30px;
+	float:left;
+	padding:36px 0px 40px 30px;
 }
-header#headerU2plus .left img{
+
+/*toptabs*/
+.toptabs{
+	overflow:hidden;
+	float:right;
+	margin-right:15px;
+}
+
+/* logging*/
+.logging{
+	float:right;
+	width:215px;
+}
+.toptabs .logging a{
+	display:block;
+	background-color:#1F276F;
+	background: -moz-linear-gradient(top, #3F5A9F, #1F276F);
+	background: -webkit-gradient(linear, left top, left bottom, from(#3F5A9F), to(#1F276F));
+	color:#FFF;
+	font-weight:bold;
+	text-align:center;
+	height:36px;
+	line-height:36px;
+	border-radius:0 0 7px 7px;
+	-webkit-border-bottom-left-radius: 7px;
+	-moz-border-radius-bottomleft: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	-moz-border-radius-bottomright: 7px;
+}
+.logging a:hover{
+	background-color:#3F5A9F;
+	background: -moz-linear-gradient(top, #556eae, #3F5A9F);
+	background: -webkit-gradient(linear, left top, left bottom, from(#556eae), to(#3F5A9F));
+	color:#FFF;
+}
+.logging span{
+	color:#FFF;
+	font-size:9px;
+	font-weight:normal;
+}
+
+/*navitext*/
+ul.navtext{
+	overflow:hidden;
+	float:right;
+}
+.navtext li{
+	float:right;
+	text-align:center;
+	margin-right:10px;
+}
+.navtext li a{
+	display:block;
 	width:100px;
-	height:30px;
+	color:#FFF;
+	font-weight:bold;
+	text-shadow:1px 1px 1px #999;
+	line-height:20px;
+	padding:3px 0;
+	border-radius:0 0 7px 7px;
+	-webkit-border-bottom-left-radius: 7px;
+	-moz-border-radius-bottomleft: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	-moz-border-radius-bottomright: 7px;
+}
+.navtext li a span{
+	display:block;
+	color:#FFF;
+	font-size:9px;
+	font-weight:normal;
+	line-height:10px;
+	text-shadow:1px 1px 1px #555;
+}
+.navtext li.price a{
+	background-color:#55B3CF;
+	background: -moz-linear-gradient(top, #76CFE9, #55B3CF);
+	background: -webkit-gradient(linear, left top, left bottom, from(#76CFE9), to(#55B3CF));
+}
+.navtext li.price a:hover{
+	background-color:#76CFE9;
+	background: -moz-linear-gradient(top, #7dd4ed, #76CFE9);
+	background: -webkit-gradient(linear, left top, left bottom, from(#7dd4ed), to(#76CFE9));
+}
+.navtext li.sign_up a{
+	background-color:#F37;
+	background: -moz-linear-gradient(top, #F59, #F37);
+	background: -webkit-gradient(linear, left top, left bottom, from(#F59), to(#F37));
+}
+.navtext li.sign_up a:hover{
+	background-color:#F59;
+}
+
+/*navitext*/
+.fortopnews{
+	float:left;
+	margin-top:42px;
+	margin-left:10px;
+}
+
+/*h_socialicon*/
+.socialicon{
+	clear:both;
+	float:right;
+	margin-top:10px;
+}
+.socialicon li{
+	float:left;
+	margin-left:8px;
+}
+iframe[src*="www.facebook.com/plugins/like.php"]{
+        width:100px !important;
+}
+iframe.twitter-share-button{
+        width: 93px !important;
+}
+#___plusone_0{ width:60px !important; }
+
+
+/* INFORMATION
+============================================================================*/
+.columnfor3{
+	clear:both;
+	overflow:hidden;
+}
+.columnfor3 li{
+	float:left;
+	width:280px;
+	margin:0 10px 0 30px;
+}
+
+/*ゆううつ部ブログ*/
+li.blog{
+	background:url(/assets/info.png) left bottom no-repeat scroll;
+	width:280px;
+	height:450px;
+}
+li.blog div{
+	background-color:#FFF;
+	height:140px;
+	padding:40px 15px;
+	text-align:center;
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+}
+li.blog h3{
+	font-size:2em;
+	font-weight:bold;
+}
+li.blog span{
+	font-family:Arial, Helvetica, sans-serif;
+}
+li.blog span a{
+	color:#999;
+	text-decoration:none;
+}
+li.blog span a:hover{
+	color:#CCC;
+	text-decoration:none;
+}
+li.blog p{
+	color:#333;
+	font-size:1.1em;
+	line-height:180%;
+	margin-top:1em;
+	white-space:nowrap;
+}
+.columnfor3 .blog a{ color:#55B3CF; }
+.blog a:hover{ color:#76CFE9; }
+
+#information{
+	background-color:#dbeaee;
+	padding-top:30px;
+	padding-bottom:50px;
+}
+#information ul.navi li{
+	height:450px;
+}
+#information .reference{
+	margin-top:30px;
+	margin-left:30px;
 }
 
 
