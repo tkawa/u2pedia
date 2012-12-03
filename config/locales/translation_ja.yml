@@ -22,7 +22,7 @@ ja:
         title: タイトル  #g
         updator: :activerecord.models.updator  #g
   wiki:
-    "Save page": 上記の認証用文字を入力して内容を更新する
+    "Save page": 更新する
     "Preview": プレビュー
     "Cancel": 戻る
     "There is no such page": ページがありません。<a href="%{new_url}">新しくページを作成</a>しますか？
@@ -32,5 +32,6 @@ ja:
     "Content:": :activerecord.attributes.wiki_page.content
     "Destroy Confirm": 元に戻すことはできません。削除してよろしいですか？
     "Comment on this change (optional):": 編集内容の要約（任意）
+    "Please accept": うつペディアへ記事の追加、もしくは記事の変更をするには利用規約へ同意いただく必要があります。
     "Please try again": 入力された文字は認証用の文字と一致しませんでした。もう一度入力してください。
-    "Prove not robot": 認証（更新時のみ必須）
+    "Prove not robot": ロボットによる書き込みでないことを証明
