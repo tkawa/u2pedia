@@ -91,6 +91,9 @@ GEM
       nokogiri (~> 1.4)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (~> 0.0, >= 0.0.9)
+    meta_request (0.2.1)
+      rack-contrib
+      rails
     mime-types (1.19)
     multi_json (1.5.0)
     net-http-digest_auth (1.2.1)
@@ -113,6 +116,8 @@ GEM
     rack (1.4.4)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-recaptcha (0.6.4)
       json
     rack-rewrite (1.2.1)
@@ -199,6 +204,7 @@ DEPENDENCIES
   i18n_generators
   irwi!
   jquery-rails
+  meta_request (= 0.2.1)
   omniauth-scaffold
   omniauth-twitter
   pg
