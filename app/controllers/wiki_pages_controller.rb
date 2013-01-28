@@ -20,14 +20,14 @@ class WikiPagesController < ApplicationController
     @page.creator = @current_user if @page.new_record? # Assign it's creator if it's new page
 
     if params[:save]
-      if recaptcha_valid? && params[:tos] == true
+      if recaptcha_valid? && params[:tos] == 'true'
         @page.save
         redirect_to url_for( :action => :show, :path => @page.path.split('/') ) # redirect to new page's path (if it changed)
       else
         if !recaptcha_valid?
           flash.now[:alert]="Please try again"
         end
-        if params[:tos] == nil
+        if params[:tos] != 'true'
           flash.now[:tos_alert]="Please accept"
           @tos_checked = false
         end
