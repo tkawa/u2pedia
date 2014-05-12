@@ -35,6 +35,7 @@ gem 'omniauth-scaffold', :group => :development
 gem 'omniauth-twitter'
 gem 'rails_config'
 gem 'rack-recaptcha', :require => 'rack/recaptcha'
+gem 'rollbar'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
